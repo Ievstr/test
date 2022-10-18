@@ -1,0 +1,82 @@
+.order {
+  padding: 11.8rem 0 15rem;
+  background: #272733 url(../img/order-bg.png) 50% / contain no-repeat;
+  &-heading {
+    text-align: center;
+    margin-bottom: 8rem;
+  }
+  &-title {
+    font-size: 3.6rem;
+    @include roboto;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 3rem;
+  }
+  &-subtitle {
+    font-size: 2rem;
+    color: #BBBBBB;
+  }
+  &-step {
+    width: 20.9rem;
+    text-align: center;
+    margin-bottom: 5rem;
+    &:hover {
+      .order-step {
+        &__img {
+          img {
+            transform: scale(1.15);
+          }
+        }
+        &__title {
+          color: $primary;
+        }
+      }
+    }
+    &s {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 3.5rem;
+    }
+    &:not(:nth-child(5n)) {
+      margin-right: 3.1rem;
+    }
+    &:nth-child(5n), &:last-child {
+      .order-step__img::after {
+        content: none;
+      }
+    }
+    &__img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      width: 10rem;
+      height: 10rem;
+      border-radius: 50%;
+      background: $primary;
+      border: .5rem solid #14317B;
+      margin: 0 auto 2rem;
+      position: relative;
+      img {
+        width: 5.5rem;
+        transition: transform .25s;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: calc(100% + 2rem);
+        transform: translateY(-50%);
+        width: 11rem;
+        height: .6rem;
+        background: url(../img/line.svg) 50% / contain no-repeat;
+      }
+    }
+    &__title {
+      font-size: 1.6rem;
+      color: #fff;
+      transition: color .25s;
+    }
+  }
+}

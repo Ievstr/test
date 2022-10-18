@@ -1,0 +1,48 @@
+.footer {
+  padding: 3rem 0;
+  background: #3D4050;
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3rem;
+    color: #fff;
+  }
+  &-copy {
+    span {
+      text-transform: uppercase;
+    }
+  }
+  &-group {
+    display: flex;
+    align-items: center;
+  }
+  &-payment {
+    color: #C3C3C3;
+    padding: 0 4rem;
+    border-left: 1px solid #C3C3C3;
+    border-right: 1px solid #C3C3C3;
+    // margin: 0 3.8rem;
+  }
+  &-contacts {
+    .footer__link {
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  transition: color .25s;
+  &:not(:last-child) {
+    margin-right: 3.8rem;
+  }
+  img {
+    width: 2rem;
+    flex-shrink: 0;
+    margin-right: 1rem;
+  }
+}

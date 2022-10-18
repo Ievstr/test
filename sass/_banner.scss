@@ -1,0 +1,64 @@
+.banner {
+  padding: 20.3rem 0;
+  position: relative;
+  z-index: 1;
+  &-bg, &-picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &-text {
+    width: 70%;
+  }
+  &-title {
+    margin-bottom: 8.9rem;
+  }
+  &-group {
+    margin-bottom: 8rem;
+    &__title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1.1rem;
+    }
+  }
+  &__list {
+    padding-left: 2.6rem;
+  }
+  &-btn {
+    &:not(:last-child) {
+      margin-right: 3rem;
+    }
+    &s {
+      display: flex;
+    }
+  }
+}
+
+.list {
+  &__item {
+    font-size: 2rem;
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: .5rem;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -1.5rem;
+      transform: translateY(-50%);
+      width: .5rem;
+      height: 0.15rem;
+      background: #000;
+    }
+  }
+}

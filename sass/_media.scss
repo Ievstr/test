@@ -1,0 +1,226 @@
+@media (max-width: 48em) {
+  .header {
+    padding: 0;
+    background: none;
+    &.scroll {
+      padding: 0;
+    }
+    .container {
+      padding: 0;
+    }
+    &-content {
+      padding: 4rem;
+      background: rgba(16, 16, 29, 0.9);
+    }
+    &__nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      margin: 0;
+      padding: 19.5rem 4rem 4rem;
+      background: rgba(16, 16, 29, 1);
+      transition: all 0.4s ease;
+      transform: translateY(-150%);
+      overflow-x: hidden;
+      overflow-y: auto;
+      z-index: -1;
+      &.active {
+        transform: translateY(0%);
+      }
+    }
+    &-burger {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 5rem;
+      height: 5rem;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+      &.active {
+        span {
+          display: inline-block;
+          &:nth-child(1) {
+            transform: rotate(45deg);
+            margin-bottom: -.2rem;
+          }
+          &:nth-child(2) {
+            transform: rotate(-45deg);
+            margin-bottom: 0;
+            margin-top: -.2rem;
+          }
+          &:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+      span {
+        height: .4rem;
+        background: $primary;
+        transition: transform .2s;
+        &:nth-child(1), &:nth-child(2) {
+          margin-bottom: 1.2rem;
+        }
+        &:last-child {
+          width: 2.5rem;
+        }
+      }
+    }
+  }
+
+  .logo {
+    width: 22rem;
+  }
+
+  .nav {
+    &__list {
+      flex-direction: column;
+    }
+    &__item {
+      font-size: 3.5rem;
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 5rem;
+      }
+    }
+  }
+
+  .banner {
+    padding: 20rem 0 10rem;
+    &-text {
+      width: 100%;
+    }
+    &-title {
+      margin-bottom: 12rem;
+    }
+    &-group {
+      margin-bottom: 12rem;
+      &__title {
+        font-size: 3.6rem;
+        margin-bottom: 2rem;
+      }
+    }
+    &__list {
+      padding-left: 4rem;
+    }
+    &-btn {
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 3rem;
+      }
+      &s {
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  .list {
+    &__item {
+      font-size: 3rem;
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+      &::before {
+        top: 1.8rem;
+        transform: none;
+        left: -2rem;
+        width: 1rem;
+        height: 0.3rem;
+      }
+    }
+  }
+
+  .order {
+    padding: 15rem 0;
+    &-heading {
+      margin-bottom: 12rem;
+    }
+    &-title {
+      font-size: 5rem;
+      margin-bottom: 3rem;
+    }
+    &-subtitle {
+      font-size: 2.8rem;
+      color: #BBBBBB;
+    }
+    &-step {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      text-align: left;
+      margin-bottom: 12rem;
+      &s {
+        margin-bottom: 6rem;
+      }
+      &:not(:nth-child(5n)) {
+        margin-right: 0;
+      }
+      &:nth-child(5n) {
+        .order-step__img::after {
+          content: '';
+        }
+      }
+      &:last-child {
+        .order-step__img::after {
+          content: none;
+        }
+      }
+      &__img {
+        width: 15rem;
+        height: 15rem;
+        border-width: 1rem;
+        margin: 0 4rem 0 0;
+        img {
+          width: 6.5rem;
+        }
+        &::after {
+          top: calc(100% + 6.3rem);
+          left: 50%;
+          transform: translate(-50%, 0) rotate(-90deg);
+          width: 14.4rem;
+          height: 1.2rem;
+          background: url(../img/line-mobile.svg) 50% / contain no-repeat;
+        }
+      }
+      &__title {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  .footer {
+    padding: 8rem 0 4rem;
+    &-content {
+      flex-direction: column-reverse;
+      justify-content: flex-start;
+      align-items: unset;
+      font-size: 3rem;
+    }
+    &-copy {
+      font-size: 2.3rem;
+    }
+    &-group {
+      display: block;
+    }
+    &-payment {
+      padding: 6rem 0;
+      margin: 6rem 0;
+      border: none;
+      border-top: 1px solid #C3C3C3;
+      border-bottom: 1px solid #C3C3C3;
+    }
+  }
+
+  .link {
+    &:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 4rem;
+    }
+    img {
+      width: 4rem;
+      margin-right: 2rem;
+    }
+  }
+}

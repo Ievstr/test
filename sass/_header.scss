@@ -1,0 +1,64 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 3.2rem 0;
+  background: rgba(16, 16, 29, 0.9);
+  color: #fff;
+  transition: padding .25s;
+  &.scroll {
+    padding: 2rem 0;
+  }
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 4.7em;
+  }
+  &-logo {
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  &__nav {
+    margin-top: .6rem;
+  }
+  &-burger {
+    display: none;
+  }
+}
+
+.logo {
+  display: inline-block;
+  width: 18.1rem;
+  transition: all .25s;
+}
+
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+  &__item {
+    font-size: 1.3rem;
+    @include roboto;
+    font-weight: 500;
+    font-weight: 600;
+    font-weight: 700;
+    text-transform: uppercase;
+    &:not(:last-child) {
+      margin-right: 6rem;
+    }
+    &.active {
+      color: $primary;
+    }
+  }
+  &__link {
+    transition: color .25s;
+    &:hover {
+      color: $primary;
+    }
+  }
+}
